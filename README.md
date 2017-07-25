@@ -3,6 +3,6 @@
 
 # zookeeper安装
 
-### 安装JDK
+### 1.安装JDK
 
 
