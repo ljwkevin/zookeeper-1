@@ -36,6 +36,7 @@
   zkServer.sh status zoo.cfg
   zkServer.sh status zoo_1.cfg
   zkServer.sh status zoo_2.cfg
+  状态正常，此时查看zoo_1是leader 其他都是follower
 
   
 
