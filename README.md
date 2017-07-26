@@ -18,25 +18,41 @@
 3. 启动查看状态
 ### 3.伪集群zookeeper
  1. 创建data在data下创建myid，myid内容0
+ 
     创建data_1在data_1下创建myid，myid内容1
+    
     创建data_2在data_2下创建myid，myid内容2
+    
     同时创建datalog_1,datalog_2
+
 2. 复制zoo.cfg文件为zoo_1.cfg,zoo_2.cfg
-   修改配置文件中的对应数据和日志目录
-   修改端口号为2181,2182,2183
-   在3个配置配置文件中添加
-   server.0=localhost:2287:3387
-   server.1=localhost:2288:3388
-   server.2=localhost:2289:3389
+     修改配置文件中的对应数据和日志目录
+     修改端口号为2181,2182,2183
+     在3个配置配置文件中添加
+
+    server.0=localhost:2287:3387
+
+    server.1=localhost:2288:3388
+
+    server.2=localhost:2289:3389
+
 3. 启动服务
-  zkServer.sh start zoo.cfg
-  zkServer.sh start zoo_1.cfg
-  zkServer.sh start zoo_2.cfg
+
+    zkServer.sh start zoo.cfg
+
+    zkServer.sh start zoo_1.cfg
+
+    zkServer.sh start zoo_2.cfg
+  
 4. 查看集群状态
-  zkServer.sh status zoo.cfg
-  zkServer.sh status zoo_1.cfg
-  zkServer.sh status zoo_2.cfg
-  状态正常，此时查看zoo_1是leader 其他都是follower
+
+    zkServer.sh status zoo.cfg
+
+    zkServer.sh status zoo_1.cfg
+
+    zkServer.sh status zoo_2.cfg
+  
+    状态正常，此时查看zoo_1是leader 其他都是follower
 
   
 
